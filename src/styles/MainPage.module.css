@@ -12,3 +12,23 @@
   justify-content: space-between; /* 로고는 왼쪽, PixelWriting은 오른쪽으로 정렬 */
   width: 100%; /* 전체 너비를 차지하도록 설정 */
 }
+
+.pixelWriting {
+  margin: 0 auto; /* 남은 공간의 중앙에 위치하도록 자동 마진 */
+}
+
+.mainPage {
+  display: flex;
+  margin: 0 auto; /* 남은 공간의 중앙에 위치하도록 자동 마진 */
+}
+
+.menuContainer {
+}
+
+.contentContainer {
+}
+
+.footer {
+  background-color: bisque;
+  height: auto;
+}

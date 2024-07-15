@@ -9,24 +9,38 @@ export default function MainPage() {
   const [haederName, setHeaderName] = useState("header");
   const [isMemu, setIsMemu] = useState(false);
 
-  console.log(styles); // 디버깅용
-
   return (
     <div className={styles.container}>
       <div className={styles.header}>
         <div
           onClick={() => {
-            navigate("/");
+            setIsMemu(!isMemu);
           }}
           style={{ cursor: "pointer" }}
         >
           <Logo multi={10} />
         </div>
         <div className={styles.pixelWriting}>
-          <PixelWriting str={haederName} fontProps={{ size: 10 }} />
+          <PixelWriting
+            str={haederName}
+            fontProps={{ size: 10, color: "#f0fff0" }}
+          />
         </div>
       </div>
-      <div className={styles.mainPage}></div>
+      <div className={styles.mainPage}>
+        {isMemu ? (
+          <div>
+            <PixelWriting str={"Hello World!"} fontProps={{ size: 4 }} />
+          </div>
+        ) : (
+          <div>
+            <PixelWriting str={"My name is you."} fontProps={{ size: 4 }} />
+          </div>
+        )}
+      </div>
+      <div className={styles.footer}>
+        <PixelWriting str={"Bye World!"} fontProps={{ size: 4 }} />
+      </div>
     </div>
   );
 }
