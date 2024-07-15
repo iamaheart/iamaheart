@@ -29,11 +29,11 @@ export default function MainPage() {
       </div>
       <div className={styles.mainPage}>
         {isMemu ? (
-          <div>
+          <div className={styles.menuContainer}>
             <PixelWriting str={"Hello World!"} fontProps={{ size: 4 }} />
           </div>
         ) : (
-          <div>
+          <div className={styles.contentContainer}>
             <PixelWriting str={"My name is you."} fontProps={{ size: 4 }} />
           </div>
         )}
