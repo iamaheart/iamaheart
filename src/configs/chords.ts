@@ -53,6 +53,49 @@ export const list = [
   seven9S1113,
 ];
 
+export enum chordList {
+  major,
+  minor,
+  add2,
+  aug,
+  dim,
+  sus4,
+  minor7,
+  major7,
+  dim7,
+  mM7,
+  b5,
+  mb5,
+  six,
+  seven,
+  fNine,
+  nine,
+  sNine,
+  eleven,
+  sEleven,
+  fThirteen,
+  thirteen,
+  seven913,
+  sevenF9F13,
+  sevenS9F13,
+  seven9S1113,
+}
+
+export enum keyList {
+  c,
+  cb,
+  d,
+  eb,
+  e,
+  f,
+  gb,
+  g,
+  ab,
+  a,
+  bb,
+  b,
+}
+
 export const noteList = [
   "C",
   "Db",
@@ -67,5 +110,7 @@ export const noteList = [
   "Bb",
   "B",
 ];
+
+export const scaleList = ["1", "2m", "3m", "4", "5", "6m", "7dim"];
 
 export const START_NOTE = 36;

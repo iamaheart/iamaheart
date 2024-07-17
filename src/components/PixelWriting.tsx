@@ -68,7 +68,7 @@ const PixelContainer = React.memo(
 
 const PixelWord = React.memo((props: PixelWritingProps) => {
   const characters = props.str.split("");
-  const GAP_MULTIPLIER = 2;
+  const GAP_MULTIPLIER = 1;
   const CONTAINER_CLASS = "pixelWord";
   const mergedFontProps = { ...DEFAULT_PIXEL_FONT_PROPS, ...props.fontProps };
   return (
