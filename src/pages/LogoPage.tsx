@@ -13,7 +13,7 @@ export default function LogoPage() {
         }}
         style={{ cursor: "pointer" }}
       >
-        <Logo multi={10} />
+        <Logo multi={8} />
       </div>
     </div>
   );
