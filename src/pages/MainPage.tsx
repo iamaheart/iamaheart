@@ -48,6 +48,14 @@ export default function MainPage() {
             >
               <PixelWriting str={"chord"} fontProps={{ size: FONT_SIZE }} />
             </div>
+            <div
+              onClick={() => {
+                toContent("chord");
+              }}
+              style={{ cursor: "pointer" }}
+            >
+              <PixelWriting str={"qr code?"} fontProps={{ size: FONT_SIZE }} />
+            </div>
           </div>
         ) : (
           <div className={styles.contentContainer}>
