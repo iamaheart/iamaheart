@@ -4,6 +4,7 @@ import Logo from "../components/Logo";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Chord from "../components/Chord";
+import PixelButton from "../components/PixelButton";
 
 export default function MainPage() {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ export default function MainPage() {
   const FONT_SIZE = 3;
   const HEADER_SIZE = 10;
 
-  const toContent = (str: string) => {
+  const toContent = (str: string):void => {
     setContent(str);
     setHeaderName(str);
     setIsMemu(false);
@@ -33,29 +34,16 @@ export default function MainPage() {
         <div className={styles.headerText}>
           <PixelWriting
             str={haederName}
-            fontProps={{ size: HEADER_SIZE, color: "#f0fff0" }}
+            fontProps={{ size: HEADER_SIZE, color: 'black' }}
           />
         </div>
       </div>
       <div className={styles.mainPage}>
         {isMemu ? (
           <div className={styles.menuContainer}>
-            <div
-              onClick={() => {
-                toContent("chord");
-              }}
-              style={{ cursor: "pointer" }}
-            >
-              <PixelWriting str={"chord"} fontProps={{ size: FONT_SIZE }} />
-            </div>
-            <div
-              onClick={() => {
-                toContent("chord");
-              }}
-              style={{ cursor: "pointer" }}
-            >
-              <PixelWriting str={"qr code?"} fontProps={{ size: FONT_SIZE }} />
-            </div>
+            <PixelButton onClock={()=>{toContent("chord")}} str={'chord'} size={FONT_SIZE} />
+            <PixelButton onClock={()=>{toContent("chord")}} str={'qr cord'} size={FONT_SIZE} />
+            <PixelButton onClock={()=>{toContent("chord")}} str={'aaa'} size={FONT_SIZE} />
           </div>
         ) : (
           <div className={styles.contentContainer}>

@@ -29,20 +29,24 @@
   display: flex;
   flex: 1;
   width: 100vw;
-  background-color: silver;
+  background-color: white;
   flex-direction: column;
+}
+
+.menuButton {
+  cursor: "pointer";
 }
 
 .contentContainer {
   display: flex;
   flex: 1;
   width: 100vw;
-  background-color: gainsboro;
+  background-color: white;
 }
 
 .footer {
   width: 100%;
-  background-color: silver;
+  background-color: white;
   padding: 30px;
   margin-left: 20px;
   height: auto;

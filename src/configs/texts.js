@@ -16,7 +16,7 @@ const _6 = ["Being itself is happiness."];
 
 const _7 = [
   "What I do is who I am.",
-  "Food becomes the body.",
+  "Foods become the body.",
   "Thoughts become personality.",
   "Actions become character.",
 ];
@@ -26,5 +26,10 @@ const _8 = [
   "But when I change, everything changes.",
   "And I change according to my beliefs.",
 ];
+
+const _9 = [
+  'dfsd',
+  'sdfsd',
+]
 
 export const texts = [_0, _3];
