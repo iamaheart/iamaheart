@@ -1,15 +1,12 @@
 {
-  "files": {
-    "main.css": "/iamaheart/static/css/main.6148ffe3.css",
-    "main.js": "/iamaheart/static/js/main.74012666.js",
-    "static/js/453.756e57b9.chunk.js": "/iamaheart/static/js/453.756e57b9.chunk.js",
-    "index.html": "/iamaheart/index.html",
-    "main.6148ffe3.css.map": "/iamaheart/static/css/main.6148ffe3.css.map",
-    "main.74012666.js.map": "/iamaheart/static/js/main.74012666.js.map",
-    "453.756e57b9.chunk.js.map": "/iamaheart/static/js/453.756e57b9.chunk.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.6148ffe3.css",
-    "static/js/main.74012666.js"
-  ]
+    "files": {
+        "main.css": "/iamaheart/static/css/main.6148ffe3.css",
+        "main.js": "/iamaheart/static/js/main.74012666.js",
+        "static/js/453.756e57b9.chunk.js": "/iamaheart/static/js/453.756e57b9.chunk.js",
+        "index.html": "/iamaheart/index.html",
+        "main.6148ffe3.css.map": "/iamaheart/static/css/main.6148ffe3.css.map",
+        "main.74012666.js.map": "/iamaheart/static/js/main.74012666.js.map",
+        "453.756e57b9.chunk.js.map": "/iamaheart/static/js/453.756e57b9.chunk.js.map"
+    },
+    "entrypoints": ["static/css/main.6148ffe3.css", "static/js/main.74012666.js"]
 }

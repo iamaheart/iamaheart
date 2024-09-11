@@ -1,53 +1,50 @@
 /* MainPage.module.css */
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
 }
 
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* 로고는 왼쪽, PixelWriting은 오른쪽으로 정렬 */
-  width: 100%; /* 전체 너비를 차지하도록 설정 */
-  height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 로고는 왼쪽, PixelWriting은 오른쪽으로 정렬 */
+    width: 100%; /* 전체 너비를 차지하도록 설정 */
+    height: auto;
 }
 
 .headerText {
-  margin: 0 auto; /* 남은 공간의 중앙에 위치하도록 자동 마진 */
+    margin: 0 auto; /* 남은 공간의 중앙에 위치하도록 자동 마진 */
 }
 
 .mainPage {
-  display: flex;
-  flex: 1;
-  overflow: auto; /* 콘텐츠가 많아지면 스크롤 가능하게 설정 */
+    display: flex;
+    flex: 1;
+    overflow: auto; /* 콘텐츠가 많아지면 스크롤 가능하게 설정 */
 }
 
 .menuContainer {
-  display: flex;
-  flex: 1;
-  width: 100vw;
-  background-color: white;
-  flex-direction: column;
-}
-
-.menuButton {
-  cursor: "pointer";
+    display: flex;
+    flex: 1;
+    width: 100vw;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contentContainer {
-  display: flex;
-  flex: 1;
-  width: 100vw;
-  background-color: white;
+    display: flex;
+    flex: 1;
+    width: 100vw;
+    background-color: white;
 }
 
 .footer {
-  width: 100%;
-  background-color: white;
-  padding: 30px;
-  margin-left: 20px;
-  height: auto;
+    width: 100%;
+    background-color: white;
+    padding: 30px;
+    margin-left: 20px;
+    height: auto;
 }

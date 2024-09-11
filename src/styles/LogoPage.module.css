@@ -1,20 +1,20 @@
 /* LogoPage.module.css */
 body {
-  background-color: white;
+    background-color: white;
 }
 
 .logoContainer {
-  display: flex;
-  justify-content: center; /* 수평 중앙 정렬 */
-  align-items: center; /* 수직 중앙 정렬 */
-  height: 100vh; /* 뷰포트 높이 100% */
-  width: 100vw; /* 뷰포트 너비 100% */
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    height: 100vh; /* 뷰포트 높이 100% */
+    width: 100vw; /* 뷰포트 너비 100% */
 }
 
 .logo {
-  display: flex;
-  justify-content: center; /* 수평 중앙 정렬 */
-  align-items: center; /* 수직 중앙 정렬 */
-  height: 100vh; /* 뷰포트 높이 100% */
-  width: 100vw; /* 뷰포트 너비 100% */
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    height: 100vh; /* 뷰포트 높이 100% */
+    width: 100vw; /* 뷰포트 너비 100% */
 }

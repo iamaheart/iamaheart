@@ -1,16 +1,16 @@
 /* PixeWriting.css */
 
 .pixelWriting {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .pixelSentence {
-  display: flex;
-  flex-wrap: wrap; /* 처음부터 wrap 속성을 적용 */
+    display: flex;
+    flex-wrap: wrap; /* 처음부터 wrap 속성을 적용 */
 }
 
 .pixelWord {
-  display: flex;
-  flex-wrap: wrap; /* 처음부터 wrap 속성을 적용 */
+    display: flex;
+    flex-wrap: wrap; /* 처음부터 wrap 속성을 적용 */
 }

@@ -1,27 +1,27 @@
 /* Chord.module.css */
 .start {
-  display: flex;
-  justify-content: center; /* 수평 중앙 정렬 */
-  background-color: bisque;
-  align-items: center; /* 수직 중앙 정렬 */
-  height: 100%;
-  width: 100vw; /* 뷰포트 너비 100% */
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    background-color: bisque;
+    align-items: center; /* 수직 중앙 정렬 */
+    height: 100%;
+    width: 100vw; /* 뷰포트 너비 100% */
 }
 
 .container {
-  display: flex;
-  justify-content: center; /* 수평 중앙 정렬 */
-  background-color: beige;
-  align-items: center; /* 수직 중앙 정렬 */
-  height: 100%;
-  width: 100vw; /* 뷰포트 너비 100% */
-  flex-direction: column;
-  gap: 50px;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    background-color: beige;
+    align-items: center; /* 수직 중앙 정렬 */
+    height: 100%;
+    width: 100vw; /* 뷰포트 너비 100% */
+    flex-direction: column;
+    gap: 50px;
 }
 
 .key {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  flex-wrap: wrap; /* 처음부터 wrap 속성을 적용 */
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap; /* 처음부터 wrap 속성을 적용 */
 }
