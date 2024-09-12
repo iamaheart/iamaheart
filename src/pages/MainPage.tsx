@@ -1,7 +1,7 @@
 import styles from '../styles/MainPage.module.css';
 import PixelWriting from '../components/PixelWriting';
 import Logo from '../components/Logo';
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import Chord from '../components/Chord';
 import PixelButton from '../components/PixelButton';
 import {MENU} from '../configs/configs';
@@ -18,11 +18,6 @@ export default function MainPage() {
 
     const [audioContext, setAudioContext] = useState<AudioContext | null>(null);
 
-    useEffect(() => {
-        const context = new window.AudioContext();
-        setAudioContext(context);
-    }, []);
-
     const handleInitializeAudioContext = () => {
         if (!audioContext) {
             const context = new window.AudioContext();
@@ -37,14 +32,18 @@ export default function MainPage() {
         setIsMemu(false);
     };
 
+    const touchIcon = () => {
+        setIsMemu(true);
+        setHeaderName('');
+        handleInitializeAudioContext();
+    };
+
     return (
         <div className={styles.container}>
             <div className={styles.header}>
                 <div
                     onClick={() => {
-                        setIsMemu(true);
-                        setHeaderName('');
-                        handleInitializeAudioContext();
+                        touchIcon();
                     }}
                     style={{cursor: 'pointer'}}
                 >
@@ -85,14 +84,7 @@ export default function MainPage() {
                             ) : content === MENU[4] ? (
                                 <Words />
                             ) : (
-                                <div className={styles.contentContainer}>
-                                    <div>
-                                        <PixelWriting
-                                            str={'Blank Space'}
-                                            fontProps={{size: FONT_SIZE}}
-                                        />
-                                    </div>
-                                </div>
+                                <div className={styles.contentContainer}></div>
                             )
                         ) : (
                             <div></div>
