@@ -8,6 +8,7 @@ import PixelButton from '../components/PixelButton';
 import {MENU} from '../configs/configs';
 import Words from '../components/Words';
 import QrCode from '../components/QrCode';
+import Piano from '../components/Piano';
 
 export default function MainPage() {
     const navigate = useNavigate();
@@ -62,6 +63,8 @@ export default function MainPage() {
                     <div className={styles.contentContainer}>
                         {content === MENU[1] ? (
                             <Chord />
+                        ) : content === MENU[2] ? (
+                            <Piano />
                         ) : content === MENU[3] ? (
                             <QrCode />
                         ) : content === MENU[4] ? (
@@ -70,7 +73,7 @@ export default function MainPage() {
                             <div className={styles.contentContainer}>
                                 <div>
                                     <PixelWriting
-                                        str={'Hello World!'}
+                                        str={'Blank Space'}
                                         fontProps={{size: FONT_SIZE}}
                                     />
                                 </div>
