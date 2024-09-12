@@ -1,8 +1,7 @@
 import styles from '../styles/MainPage.module.css';
 import PixelWriting from '../components/PixelWriting';
 import Logo from '../components/Logo';
-import {useState} from 'react';
-import {useNavigate} from 'react-router-dom';
+import {useEffect, useState} from 'react';
 import Chord from '../components/Chord';
 import PixelButton from '../components/PixelButton';
 import {MENU} from '../configs/configs';
@@ -11,12 +10,26 @@ import QrCode from '../components/QrCode';
 import Piano from '../components/Piano';
 
 export default function MainPage() {
-    const navigate = useNavigate();
     const [haederName, setHeaderName] = useState('');
     const [content, setContent] = useState('');
     const [isMemu, setIsMemu] = useState(false);
     const FONT_SIZE = 3;
     const HEADER_SIZE = 10;
+
+    const [audioContext, setAudioContext] = useState<AudioContext | null>(null);
+
+    useEffect(() => {
+        const context = new window.AudioContext();
+        setAudioContext(context);
+    }, []);
+
+    const handleInitializeAudioContext = () => {
+        if (!audioContext) {
+            const context = new window.AudioContext();
+            setAudioContext(context);
+            context.resume();
+        }
+    };
 
     const toContent = (str: string): void => {
         setContent(str);
@@ -31,6 +44,7 @@ export default function MainPage() {
                     onClick={() => {
                         setIsMemu(true);
                         setHeaderName('');
+                        handleInitializeAudioContext();
                     }}
                     style={{cursor: 'pointer'}}
                 >
@@ -61,23 +75,27 @@ export default function MainPage() {
                     </div>
                 ) : (
                     <div className={styles.contentContainer}>
-                        {content === MENU[1] ? (
-                            <Chord />
-                        ) : content === MENU[2] ? (
-                            <Piano />
-                        ) : content === MENU[3] ? (
-                            <QrCode />
-                        ) : content === MENU[4] ? (
-                            <Words />
-                        ) : (
-                            <div className={styles.contentContainer}>
-                                <div>
-                                    <PixelWriting
-                                        str={'Blank Space'}
-                                        fontProps={{size: FONT_SIZE}}
-                                    />
+                        {audioContext ? (
+                            content === MENU[1] ? (
+                                <Chord audioContext={audioContext} />
+                            ) : content === MENU[2] ? (
+                                <Piano audioContext={audioContext} />
+                            ) : content === MENU[3] ? (
+                                <QrCode />
+                            ) : content === MENU[4] ? (
+                                <Words />
+                            ) : (
+                                <div className={styles.contentContainer}>
+                                    <div>
+                                        <PixelWriting
+                                            str={'Blank Space'}
+                                            fontProps={{size: FONT_SIZE}}
+                                        />
+                                    </div>
                                 </div>
-                            </div>
+                            )
+                        ) : (
+                            <div></div>
                         )}
                     </div>
                 )}

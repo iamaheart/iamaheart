@@ -1,17 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import {FREQUENCIES} from '../configs/frequencies';
 import {PIANO_KEY} from '../configs/pianoKey';
+import AudioContextProps from '../interfaces/AudioContextProps';
 import PixelWriting from './PixelWriting';
 
-const Piano: React.FC = () => {
-    const [audioContext, setAudioContext] = useState<AudioContext | null>(null);
+const Piano: React.FC<AudioContextProps> = ({audioContext}) => {
     const FONT_SIZE = 5;
-
-    useEffect(() => {
-        // AudioContext 생성
-        const context = new window.AudioContext();
-        setAudioContext(context);
-    }, []);
 
     // 주어진 주파수로 사인파 소리를 생성하는 함수
     const playNote = (frequency: number) => {
@@ -50,7 +44,7 @@ const Piano: React.FC = () => {
 
     return (
         <div>
-            <PixelWriting str={'Press the keys: v, q, i as C'} fontProps={{size: FONT_SIZE}} />
+            <PixelWriting str={'Press the keys: v, q, i as C note'} fontProps={{size: FONT_SIZE}} />
         </div>
     );
 };
